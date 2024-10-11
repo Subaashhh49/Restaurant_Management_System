@@ -24,7 +24,10 @@ class Order(models.Models):
     quantity  = models.IntegerField()
       
 class Reception(models.Model):
+    
     name = models.CharField(max_length=100)
+    
+    
     
 
 
