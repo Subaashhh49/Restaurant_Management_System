@@ -1,10 +1,9 @@
-from django.shortcuts import render
-
-# Create your views here.
-
 from django.shortcuts import render, redirect
 from .models import Category, Menu, Table, Waiter, Order, Reception
 from .forms import CategoryForm, MenuForm, TableForm, WaiterForm, OrderForm, ReceptionForm
+
+
+# Create your views here.
 
 # Category Views
 def category_list(request):
