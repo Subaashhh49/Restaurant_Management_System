@@ -9,6 +9,7 @@
         </li>
     {% endfor %}
 </ul>
+
 <h1>{% if form.int.pk %}Edit Category{% else %}Add Category{% endif %}</h1>
 <form method="post">
     {% csrf_token %}
@@ -18,6 +19,7 @@
 <a href="{% url 'category_list' %}">Cancel</a>
 <h1>Delete Category</h1>
 <p>Are you sure you want to delete "{{ category.name }}"?</p>
+
 <form method="post">
     {% csrf_token %}
     <button type="submit">Confirm</button>
