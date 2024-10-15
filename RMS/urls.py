@@ -16,48 +16,49 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from . import views
+from restaurant.views import category_list,category_create,category_update,category_delete,menu_list,menu_create,menu_update,menu_delete,table_list,table_create,table_update,table_delete,waiter_list,waiter_create,waiter_update,waiter_delete,order_list,order_create,order_update,order_delete,reception_list,reception_create,reception_update,reception_delete
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-     
+    
+      
     
     # Category URLs
-    path('categories/', views.category_list, name='category_list'),
-    path('categories/create/', views.category_create, name='category_create'),
-    path('categories/update/<int:pk>/', views.category_update, name='category_update'),
-    path('categories/delete/<int:pk>/', views.category_delete, name='category_delete'),
+    path('categories/', category_list, name='category_list'),
+    path('categories/create/', category_create, name='category_create'),
+    path('categories/update/<int:pk>/', category_update, name='category_update'),
+    path('categories/delete/<int:pk>/', category_delete, name='category_delete'),
 
     # Menu URLs
-    path('menus/', views.menu_list, name='menu_list'),
-    path('menus/create/', views.menu_create, name='menu_create'),
-    path('menus/update/<int:pk>/', views.menu_update, name='menu_update'),
-    path('menus/delete/<int:pk>/', views.menu_delete, name='menu_delete'),
+    path('menus/', menu_list, name='menu_list'),
+    path('menus/create/', menu_create, name='menu_create'),
+    path('menus/update/<int:pk>/', menu_update, name='menu_update'),
+    path('menus/delete/<int:pk>/', menu_delete, name='menu_delete'),
 
     # Table URLs
-    path('tables/', views.table_list, name='table_list'),
-    path('tables/create/', views.table_create, name='table_create'),
-    path('tables/update/<int:pk>/', views.table_update, name='table_update'),
-    path('tables/delete/<int:pk>/', views.table_delete, name='table_delete'),
+    path('tables/', table_list, name='table_list'),
+    path('tables/create/', table_create, name='table_create'),
+    path('tables/update/<int:pk>/', table_update, name='table_update'),
+    path('tables/delete/<int:pk>/', table_delete, name='table_delete'),
 
     # Waiter URLs
-    path('waiters/', views.waiter_list, name='waiter_list'),
-    path('waiters/create/', views.waiter_create, name='waiter_create'),
-    path('waiters/update/<int:pk>/', views.waiter_update, name='waiter_update'),
-    path('waiters/delete/<int:pk>/', views.waiter_delete, name='waiter_delete'),
+    path('waiters/', waiter_list, name='waiter_list'),
+    path('waiters/create/', waiter_create, name='waiter_create'),
+    path('waiters/update/<int:pk>/', waiter_update, name='waiter_update'),
+    path('waiters/delete/<int:pk>/', waiter_delete, name='waiter_delete'),
 
     # Order URLs
-    path('orders/', views.order_list, name='order_list'),
-    path('orders/create/', views.order_create, name='order_create'),
-    path('orders/update/<int:pk>/', views.order_update, name='order_update'),
-    path('orders/delete/<int:pk>/', views.order_delete, name='order_delete'),
+    path('orders/', order_list, name='order_list'),
+    path('orders/create/', order_create, name='order_create'),
+    path('orders/update/<int:pk>/', order_update, name='order_update'),
+    path('orders/delete/<int:pk>/', order_delete, name='order_delete'),
 
     # Reception URLs
-    path('receptions/', views.reception_list, name='reception_list'),
-    path('receptions/create/', views.reception_create, name='reception_create'),
-    path('receptions/update/<int:pk>/', views.reception_update, name='reception_update'),
-    path('receptions/delete/<int:pk>/', views.reception_delete, name='reception_delete'),
+    path('receptions/', reception_list, name='reception_list'),
+    path('receptions/create/', reception_create, name='reception_create'),
+    path('receptions/update/<int:pk>/', reception_update, name='reception_update'),
+    path('receptions/delete/<int:pk>/', reception_delete, name='reception_delete'),
 ]
     
 

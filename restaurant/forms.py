@@ -24,7 +24,8 @@ class WaiterForm(forms.ModelForm):
 class OrderForm(forms.ModelForm):
     class Meta:
         model = Order
-        fields = ['table', 'waiter', 'menu_items']
+        fields = ['table', 'waiter', 'menu',  'quantity']
+
 
 class ReceptionForm(forms.ModelForm):
     class Meta:
