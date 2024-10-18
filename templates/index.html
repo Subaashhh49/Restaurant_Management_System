@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Management System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .navbar {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        .navbar h1 {
+            margin: 0;
+        }
+        .container {
+            margin: 20px;
+        }
+        .dashboard {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .card a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        .card a:hover {
+            color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <h1>Restaurant Management System</h1>
+    </div>
+
+    <div class="container">
+        <h2>Welcome to the Restaurant Management System</h2>
+        <p>Use the links below to navigate through different sections of the system:</p>
+        <div class="dashboard">
+            <div class="card">
+                <h3><a href="{% url 'table_list' %}">Manage Tables</a></h3>
+                <p>Create, update, and manage restaurant tables.</p>
+            </div>
+            <div class="card">
+                <h3><a href="{% url 'menu_list' %}">Manage Menu</a></h3>
+                <p>Add, update, and remove menu items.</p>
+            </div>
+            <div class="card">
+                <h3><a href="{% url 'category_list' %}">Manage Categories</a></h3>
+                <p>Manage menu categories like starters, mains, desserts, etc.</p>
+            </div>
+            <div class="card">
+                <h3><a href="{% url 'order_list' %}">Manage Orders</a></h3>
+                <p>View and manage customer orders.</p>
+            </div>
+            <div class="card">
+                <h3><a href="{% url 'waiter_list' %}">Manage Waiters</a></h3>
+                <p>Add, update, or remove waiters from the system.</p>
+            </div>
+            <div class="card">
+                <h3><a href="{% url 'reception_list' %}">Manage Reception</a></h3>
+                <p>Handle reception-related tasks and staff.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
