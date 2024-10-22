@@ -12,6 +12,7 @@
         <li>
             {{ category.name }}
             <a href="{% url 'category_update' category.pk %}">Edit</a>
+            
             <a href="{% url 'category_delete' category.pk %}">Delete</a>
         </li>
         {% endfor %}
